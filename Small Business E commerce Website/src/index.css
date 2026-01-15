@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Traditional Indian Folk Art Color Palette */
+    --background: 37 35% 96%;
+    --foreground: 25 25% 15%;
+
+    --card: 37 35% 98%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 37 35% 98%;
+    --popover-foreground: 25 25% 15%;
+
+    /* Terracotta Red - Traditional Indian Folk Art */
+    --primary: 16 85% 45%;
+    --primary-foreground: 37 35% 96%;
+
+    /* Warm Gold - Traditional Indian Aesthetics */
+    --secondary: 45 95% 65%;
+    --secondary-foreground: 25 25% 15%;
+
+    --muted: 37 20% 88%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Deep Teal - Peacock Blue */
+    --accent: 185 65% 35%;
+    --accent-foreground: 37 35% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 37 35% 96%;
+
+    --border: 37 20% 85%;
+    --input: 37 20% 88%;
+    --ring: 16 85% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with traditional warmth */
+    --background: 25 25% 8%;
+    --foreground: 37 35% 92%;
+
+    --card: 25 25% 10%;
+    --card-foreground: 37 35% 92%;
+
+    --popover: 25 25% 10%;
+    --popover-foreground: 37 35% 92%;
+
+    --primary: 16 85% 55%;
+    --primary-foreground: 25 25% 8%;
+
+    --secondary: 45 80% 50%;
+    --secondary-foreground: 25 25% 8%;
+
+    --muted: 25 15% 18%;
+    --muted-foreground: 37 20% 65%;
+
+    --accent: 185 65% 45%;
+    --accent-foreground: 37 35% 92%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 37 35% 92%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 16 85% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Traditional Indian Folk Art Inspired Gradients */
+  .gradient-terracotta {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(16 75% 35%));
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(45 85% 55%));
+  }
+
+  .gradient-teal {
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(185 55% 25%));
+  }
+
+  .gradient-sunset {
+    background: linear-gradient(135deg, hsl(16 85% 45%), hsl(45 95% 65%), hsl(185 65% 35%));
+  }
+
+  /* Traditional Art Pattern Background */
+  .pattern-traditional {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.1) 2px, transparent 2px);
+    background-size: 40px 40px;
+  }
+
+  /* Cultural Typography */
+  .text-cultural {
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+  }
+
+  /* Hover effects for art pieces */
+  .art-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .art-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.3);
+  }
+}
