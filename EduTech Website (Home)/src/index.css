@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add to your global CSS */
+.scroll-list__wrp {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-list__wrp::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-list__item {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out, box-shadow 0.2s ease, border 0.2s ease;
+}
+
